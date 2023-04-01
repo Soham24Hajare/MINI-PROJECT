@@ -1,3 +1,4 @@
+from logging import root
 import tkinter as tk
 
 from matplotlib import image
@@ -6,17 +7,18 @@ class RealEstatePredictorGUI(tk.Tk):
     def __init__(self):
         super().__init__()
         font=() 
-        self.title("Real Estate Price Predictor")
+        self.title("Future Price Estimator")
         self.geometry('925x500+300+200')
         
         
         
         # Create a label widget to hold the background image
         self.background_image = tk.PhotoImage(file="Background1.png")
-        self.background_label = tk.Label(self, image=self.background_image)
+        self.background_label =tk.Label(self, image=self.background_image)
         self.background_label.place(x=0, y=0, relwidth=1, relheight=1)
-        self.soham = tk.Label(self)
-        self.soham.pack(pady=60)
+        self.label = tk.Label(self, text=" Estimate The Future Price Here ")
+        self.label.config(font=("Arial", 20))
+        self.label.pack(pady=60)
         self.Present_value = tk.Label(self, text="Enter Present Value:")
         self.Present_value.config(font=("Arial", 15))
         self.Present_value.pack(pady=5)
@@ -43,7 +45,12 @@ class RealEstatePredictorGUI(tk.Tk):
         self.predict_button.pack(pady=5)
 
         self.result_label = tk.Label(self, text="")
-        self.result_label.pack(pady=5)
+        self.result_label.pack(pady=60)
+        
+    
+       
+        
+        
         
         
     def predict(self):
@@ -64,6 +71,8 @@ def predict_price(Present_value,Growth_rate,Time_period):
     # This is just a placeholder
     return Present_value*(1+Growth_rate)**Time_period
     #return bedrooms * 10000 + bathrooms * 5000 + size * 100
+    
+    
 
 if __name__ == "__main__":
     app = RealEstatePredictorGUI()
