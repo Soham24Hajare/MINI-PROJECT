@@ -25,7 +25,7 @@ def predict():
 def predict_price(Present_value,Growth_rate,Time_period):
     # Replace this with your actual prediction code
     # This is just a placeholder
-    return Present_value*(1+Growth_rate)**Time_period
+    return Present_value*(1+Growth_rate/100)**Time_period
     #return bedrooms * 10000 + bathrooms * 5000 + size * 100
 
 def home():
