@@ -45,4 +45,16 @@ t4=Entry(f2,textvariable=tax, font="arial 17").grid(row=5,column=1)
 
 Button(f2, text="Submit",font="arial 20 bold", command=enter).grid(row=7,column=1)
 
+def home():
+
+    import homepage
+
+homep= Button(p,width=6,text='Back',border=0,
+                bg='white',font=("Arial", 15)
+                ,command=home)
+homep.place(x=10,y=10)
+
+
+
+
 p.mainloop()

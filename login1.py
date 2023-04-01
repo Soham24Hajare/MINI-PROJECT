@@ -23,7 +23,7 @@ def signin():
 
 
     if username in r.keys() and password==r[username]:
-        screen=Toplevel(root)
+        '''screen=Toplevel(root)
         screen.title('App')
         screen.geometry('925x500+300+200')
         screen.config(bg='white')
@@ -31,7 +31,8 @@ def signin():
         Label(screen,text="Hello Everyone!",bg='#fff'
               ,font=('Calibri(Body)',50,'bold')).pack(expand=True)
 
-        screen.mainloop()
+        screen.mainloop()'''
+        import homepage
 
     else:
         messagebox.showerror('Invalid','invalid username or password')
