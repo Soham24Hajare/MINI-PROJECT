@@ -1,28 +1,59 @@
 from tkinter import *
+import sqlite3
+from tkinter import messagebox
+import re
 
-window = Tk()
+from PIL import ImageTk, Image
+
+#GUI
+   
+win = Tk()
+win.geometry("1000x700")
+win.title("Home Page")                        
+win["bg"] = "#e8f8fa"  
+
+
+win.resizable(False,False)
+
+frame = Frame(win, width=600, height=400)
+frame.pack()
+frame.place(x=20,y=150)
+
+image = Image.open("homepage.png")
+
+# Resize the image using resize() method
+resize_image = image.resize((600,400))
+ 
+img = ImageTk.PhotoImage(resize_image)
+ 
+# create label and add resize image
+label1 = Label(frame,image=img)
+label1.image = img
+label1.pack()
+label1.place(x=0,y=0)
+
+#Form Title
+label_title = Label(win,text ="Welcome to Property Price Predictor",fg="white",width = 30,bg="#57717a",font = ("bold",25)).place(x=220,y=40)
 
 def predictor():
-    window.destroy()
+    win.destroy()
     import predictor
 
 
 def estimator():
-    window.destroy()
+    win.destroy()
     import estimator
+    
+def about():
+    win.destroy()
+    import moreInfo
 
-window.geometry('925x500+300+200')
-window.resizable(False,False)
-window.title("REAL ESTATE PRICE PREDiCTOR")
-f1=Frame(window,bg='white')
-f1.pack(fill=X)
-l1=Label(f1,text="Welcome to property price predictor",font=("Microsoft YaHei UI Light",30,'bold'), fg="blue", bg='white')
-l1.pack(fill=X,pady=25)
-f=Frame(window,bg='white')
-f.pack(fill=X)
-b1=Button(f,text="Predict",font="arial 25 bold", padx=30,pady=30,command=predictor)
-b2=Button(f,text="Estimate",font="arial 25 bold",padx=30,pady=30,command=estimator)
-b1.grid(row=3,column=2,padx=150,pady=100)
-b2.grid(row=3,column=5,padx=40,pady=100)
+#Create fields
+b1=Button(win,text="Predict",font="arial 18 bold",fg="white", padx=38,pady=30,command=predictor,bg="#57717a").place(x=700,y=150)
 
-window.mainloop()
+#b1.pack(side="top")
+b2=Button(win,text="Estimate",font="arial 18 bold",fg="white",padx=29,pady=30,command=estimator,bg="#57717a").place(x=700,y=300)
+#b2.pack(side="top")
+b1=Button(win,text="MoreInfo",font="arial 18 bold",fg="white", padx=27,pady=30,command=about,bg="#57717a").place(x=700,y=450)
+
+win.mainloop()
