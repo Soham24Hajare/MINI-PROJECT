@@ -32,6 +32,7 @@ def signin():
               ,font=('Calibri(Body)',50,'bold')).pack(expand=True)
 
         screen.mainloop()'''
+        root.destroy()
         import homepage
 
     else:
@@ -150,7 +151,7 @@ def signup_command():
     window.mainloop()
 
 
-img= PhotoImage(file='login.png')
+img= PhotoImage(file='login1.png')
 Label(root,image=img,bg='white').place(x=50,y=50)
 
 frame=Frame(root,width=350,height=350,bg='white')
