@@ -33,7 +33,7 @@ label1.pack()
 label1.place(x=0,y=0)
 
 #Form Title
-label_title = Label(win,text ="Welcome to Property Price Predictor",fg="white",width = 30,bg="#57717a",font = ("bold",25)).place(x=220,y=40)
+label_title = Label(win,text ="Welcome to Property Price Predictor",fg="white",width = 30,bg="#485c63",font = ("bold",25)).place(x=220,y=40)
 
 def predictor():
     win.destroy()
@@ -49,11 +49,11 @@ def about():
     import moreInfo
 
 #Create fields
-b1=Button(win,text="Predict",font="arial 18 bold",fg="white", padx=38,pady=30,command=predictor,bg="#57717a").place(x=700,y=150)
+b1=Button(win,text="Predict",font="arial 18 bold",fg="white", padx=38,pady=30,command=predictor,bg="#485c63").place(x=700,y=150)
 
 #b1.pack(side="top")
-b2=Button(win,text="Estimate",font="arial 18 bold",fg="white",padx=29,pady=30,command=estimator,bg="#57717a").place(x=700,y=300)
+b2=Button(win,text="Estimate",font="arial 18 bold",fg="white",padx=29,pady=30,command=estimator,bg="#485c63").place(x=700,y=300)
 #b2.pack(side="top")
-b1=Button(win,text="MoreInfo",font="arial 18 bold",fg="white", padx=27,pady=30,command=about,bg="#57717a").place(x=700,y=450)
+b1=Button(win,text="MoreInfo",font="arial 18 bold",fg="white", padx=27,pady=30,command=about,bg="#485c63").place(x=700,y=450)
 
 win.mainloop()

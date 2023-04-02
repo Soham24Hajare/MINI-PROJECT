@@ -34,6 +34,14 @@ label1.image = img
 label1.pack()
 label1.place(x=10,y=10)
 
+def home():
+    win.destroy()
+    import homepage
+    
+homep= Button(win,width=6,text='Back',border=0,
+                bg='white',font=("Arial", 15)
+                ,command=home)
+homep.place(x=19,y=16)
 
 
 
