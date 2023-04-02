@@ -1,5 +1,28 @@
 from tkinter import *
+import re
+from PIL import ImageTk, Image
+
+
 p= Tk()
+
+'''image = Image.open("homepage.png")
+
+# Resize the image using resize() method
+resize_image = image.resize((600,400))
+ 
+img = ImageTk.PhotoImage(resize_image)
+ 
+# create label and add resize image
+label1 = Label(p,image=img)
+label1.image = img
+label1.pack()
+label1.place(x=0,y=0)'''
+
+def home():
+
+    import homepage
+
+
 
 def enter():
     #a=area.get()
@@ -48,5 +71,11 @@ Entry(f2,textvariable=age, font="arial 17").grid(row=4,column=1)
 Entry(f2,textvariable=tax, font="arial 17").grid(row=5,column=1)
 
 Button(f2, text="Submit",font="arial 20 bold", command=enter).grid(row=7,column=1)
+
+
+homep= Button(p,width=6,text='Back',border=0,
+                bg='white',font=("Arial", 15)
+                ,command=home)
+homep.place(x=10,y=10)
 
 p.mainloop()
