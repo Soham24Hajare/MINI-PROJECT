@@ -54,6 +54,9 @@ def enter():
     #d.place(x=700,y=150)
     Label(text="Predicted prize(in 1000$)",font="arial 17 bold").place(x=650,y=600)
 
+def home():
+    p.destroy()
+    import homepage
 #f1 = Frame(p,width=550,height=40, bg="black")
 #f1.pack(fill=X)
 #f2=Frame(p,width=550,height=400)
@@ -87,8 +90,8 @@ def home():
     p.destroy()
     import homepage
     
-homep= Button(p,width=6,text='Back',border=0,
-                bg='white',font=("Arial", 15)
-                ,command=home)
+#homep= Button(p,width=6,text='Back',border=0,
+               # bg='white',font=("Arial", 15)
+               # ,command=home)
 homep.place(x=10,y=17)
 p.mainloop()
