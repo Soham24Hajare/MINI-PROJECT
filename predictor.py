@@ -86,12 +86,12 @@ Entry(textvariable=tax, font="arial 17").place(x=910,y=360)
 
 Button(text="Submit",font="arial 17 bold",fg="white",bg="#485c63", command=enter).place(x=930,y=430)
 
-def home():
-    p.destroy()
-    import homepage
+#def home():
+   # p.destroy()
+   # import homepage
     
-#homep= Button(p,width=6,text='Back',border=0,
-               # bg='white',font=("Arial", 15)
-               # ,command=home)
+homep= Button(p,width=6,text='Back',border=0,
+                bg='white',font=("Arial", 15)
+                ,command=home)
 homep.place(x=10,y=17)
 p.mainloop()
